@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux'
 import { addUser } from '../utils/userSlice'
+import { UserIcon } from '../utils/Constants'
 
 
 
@@ -33,7 +34,7 @@ const Login = () => {
         .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/103622647?v=4"
+          displayName: name.current.value, photoURL:UserIcon,
         }).then(() => {
           const {uid, email,displayName,photoURL} = auth.currentUser;
         dispatch(addUser({uid:uid, email:email,displayName:displayName,photoURL:photoURL}))
@@ -42,7 +43,6 @@ const Login = () => {
           setErorMessage(error.message)
         });
         
-        console.log(user)
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -57,7 +57,7 @@ const Login = () => {
           // Signed in 
           const user = userCredential.user;
           navigate('/browse')
-          console.log(user)
+          
           // ...
         })
         .catch((error) => {
