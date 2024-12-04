@@ -26,6 +26,12 @@
 - update store with trailer video data
 - Embedded with Youtube Video and make it autoPlay and Mute
 - Tailwind Classes to make main Container it look awesome
+- Build MovieList
+- usePopularMovie cutome hook
+- Gpt search page
+- gpt search bar
+- Multi-language Feature in Our App-
+- GPT Api 
 
 
 # Features

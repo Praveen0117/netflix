@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux'
 import { addUser } from '../utils/userSlice'
-import { UserIcon } from '../utils/Constants'
+import { BackgroundURL, UserIcon } from '../utils/Constants'
 
 
 
@@ -76,7 +76,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className='absolute'>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/74d734ca-0eab-4cd9-871f-bca01823d872/web/IN-en-20241021-TRIFECTA-perspective_2277eb50-9da3-4fdf-adbe-74db0e9ee2cf_large.jpg' alt='background' />
+        <img src={BackgroundURL} alt='background' />
       </div>
       <form onSubmit={(e) => (e.preventDefault())} className='flex flex-col absolute p-12 bg-black my-36 m-auto right-0 left-0 bg-opacity-80 text-white w-3/12'>
         <h1 className='text-2xl font-bold mb-2'>{isSignup ? "SignIn" : "SignUp"}</h1>

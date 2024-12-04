@@ -3,7 +3,6 @@ import MovieCard from './MovieCard'
 
 const MovieList = ({title,movies,}) => {
 
-    console.log(movies)
 
   return (
     <div className='px-10 py-5 bg-black'>
